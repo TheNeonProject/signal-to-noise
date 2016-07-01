@@ -27,7 +27,7 @@ public class StnPhoneStateListener extends PhoneStateListener {
         strength = signalStrength.getGsmSignalStrength();
         strength = (2 * strength) - 113; // -> dBm
 
-        signalStrengthView.setText("Signal Strength: " + Integer.toString(strength));
+        signalStrengthView.setText("Cell Signal Strength: " + Integer.toString(strength));
         if (textToSpeech != null) {
             String speech = Integer.toString(strength);
             if (strength < 0) {
